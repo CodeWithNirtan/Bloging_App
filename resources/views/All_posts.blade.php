@@ -6,6 +6,9 @@
 @section("CenterContent");
 
 <h1>
-    All Posts Shown Here
+    @foreach($posts as $p)
+
+    <h1>{{$p->title}}</h1>
+    @endforeach
 </h1>
 @endsection

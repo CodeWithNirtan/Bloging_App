@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\Post;
+use App\Http\Controllers\Posts;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +32,6 @@ Route::get('/login', function () {
 Route::get('/create_posts', function () {
     return view('CreatePosts');
 });
-Route::get('/all_posts', function () {
-    return view('All_posts');
-});
 
+
+Route::get('/Posts',[Posts::class,'index']);
